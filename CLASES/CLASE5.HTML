@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1" class = "box">Hola mundo</div>
+    <div class="box">DIV 2</div>
+    <div class="box">DIV3</div>
+    <script scr="clase5.js">
+        const divv1 = document.getElementById("div1");/// con esto lo cambias con tiempojeje
+
+
+        setTimeout(()=>{
+        divv1.innerText="holisss";
+            
+        },10000);/// con esto lo cambias con tiempojeje
+        //console.log(divv1);
+
+        const divsTodos = document.getElementsByTagName("div");
+
+
+        const box =document.querySelectorAll(".box")
+        const bout = document.querySelectorAll(".box#div1")
+        console.log(bout);
+        
+        divv1.innerHTML ="<h1>soy un titulo</h1>";
+        // primero creamos el elemento
+        const nuevodiv = document.createElement("div");
+        //lo modificamos
+        nuevodiv.innerText = "hola nuevamente";
+        nuevodiv.classList.add("box");
+        nuevodiv.classList.remove("box");
+        //lo insertamos
+        document.body.appendChild(nuevodiv)
+
+    </script>
+</body>
+</html>

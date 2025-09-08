@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var xx;
+        xx = "a";
+        xx= true;
+        xx=[];
+        <!-- esto es re peligroso , pero permite hacer cosas loquillas -->
+
+        let resultado ="1"-1;
+        console.log("CARGADO A  LA CONSOLA ");
+        console.log(resultado);
+        
+        let numero = "9";
+
+        if(!isNaN(numero)){
+
+            console.log(parseInt(numero));
+        }
+
+        function Suma(parametro1 , parametro2){
+            return parametro1 + parametro2;
+        }
+// ojo porque no podes declarar que clases de variables son 
+//y si no dcumentas se pudre todo
+        function EjecutarFuncion(funcion,parametro1,parametro2){
+            return funcion(parametro1,parametro2);
+        }
+
+        console.log(EjecutarFuncion(Suma,1,2));
+
+        let miSuma = function(parametro1,parametro2){
+            return parametro1+parametro2;
+        }
+        console.log(miSuma(2,3));
+
+        var suma = (p1,p2)=>{return p1+p2 }
+        console.log(suma(1,2));
+
+        1==1 // aca hace inferencia
+        1===1// este es bien esctricto si es un "1" da false
+
+        let saludo = "hola perra"
+
+        function Saludar(){
+            console.log(saludo);
+        }
+        // esto funciona porque si no lo busca en el closure de la 
+        //funcion , va al bloque de mas arribaaa y demas
+
+        Saludar();
+
+        // oooooooooooobjestos
+        let x = {nombre :"horacio", apellido:"coria"} ;
+        console.log(x.apellido);
+// los objetos son mutables le podes meter y sacar atributos a lo loco
+        x.edad=20;
+        delete x.edad;
+
+        x.nacimiento = 1997 ;
+        x.edad = ()=>{return 2025-x.nacimiento};
+
+        console.log(x.edad());
+
+        console.log(x.nacimiento);
+        console.log(x["nacimiento"]);
+
+        //if(x[propiedad]===undefined){
+
+            // si la tiene la uso sino la creo 
+            // esta bueno para cubrir la falta de poliformismo
+
+        //}
+    </script>
+</head>
+<body>
+    <button>Holii</button>
+    <select>
+        <option value = "1">valor 1 </option>
+        <option value = "2">valor 2 </option>
+    
+    </select>
+
+    <!--  aca siempre se importa el archivo js (al final del body) -->
+<script src="clase4.js"></script>
+</body>
+</html>
