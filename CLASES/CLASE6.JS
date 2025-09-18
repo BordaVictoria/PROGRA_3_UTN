@@ -62,5 +62,8 @@ if(!inputNombre){
 
 // el find me devuelve algp que le pedi 
 //wej   var = array.find(ele=>ele.includes(terce))
+// el filtrer tambien pero e narray
+//include develve un bool 
+// 
 
 
