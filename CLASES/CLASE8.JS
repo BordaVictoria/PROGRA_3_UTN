@@ -14,7 +14,7 @@
 
 function    $(id){return document.getElementById(id)}
 
-var url = "https://examenesutn.vercel.app/api/PersonasFutbolistasProfesionales"
+//var url = "https://examenesutn.vercel.app/api/PersonasFutbolistasProfesionales"
 
 
 
@@ -55,18 +55,18 @@ function funDelete(){
 
 
 
-$("btnSubmit").addEventListener("submit");
+//$("btnSubir").addEventListener("submit",buscarCarta);
 
 
 function buscarCarta(event){
-    event.preventDefault
-    let url = "";
-    let carta= $("txtCarta").ariaValueMax;
+    event.preventDefault();
+    let url = "https://api.scryfall.com/cards/named?fuzzy=";
+    let carta= $("txtCarta").value;
     let httpx = new XMLHttpRequest();
     httpx.onreadystatechange = function(){
         if(httpx.readyState == 4 && httpx.status==200){
             let respuesta = JSON.parse(httpx.responseText);
-            let jpgSmall = respuesta.image_uris.small;
+            let jpgSmall = respuesta.image_uris.normal;
             let img = $("imagen");
             img.setAttribute("src",jpgSmall);
 
@@ -76,3 +76,4 @@ function buscarCarta(event){
     httpx.send();
 }
 
+$("formulario").addEventListener("submit",buscarCarta);

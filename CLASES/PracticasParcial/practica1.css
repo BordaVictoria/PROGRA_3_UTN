@@ -1,0 +1,19 @@
+.body{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(55, 73, 142);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#formulario{
+    background-color: bisque;
+    border: solid 2px black;
+    font-family: 'Courier New', Courier, monospace;
+    display: grid;
+
+}
+
+table{
+    width: 100%;
+    display: grid;
+}

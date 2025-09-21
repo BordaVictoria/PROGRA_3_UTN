@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./practica1.css"/>
+</head>
+<body>
+    <h1>Practica 1 para parcial</h1>
+    <form  class="contenedor"  id="formulario">
+        <div>
+            <label>Filtar por : </label>
+            <select>
+                <option value="Todos">Todos</option>
+            </select>
+        </div>
+        <div>
+            <label for="txtEdadPromedio">Calcular Edad Promedio: </label>
+            <input type="text" id="txtEdadPromedio">
+            <button type="button">Calcular</button>
+        </div>
+        <div>
+        <label>Mostrar columnas :  </label>
+        <div id ="checkboxcontenedor">
+            <label><input type ="checkbox" id = "cbxID" checked>ID</label>
+            <label><input type ="checkbox" id = "cbxNombre" checked>Nombre</label>
+            <label><input type ="checkbox" id = "cbxApellido" checked>Apellido</label>
+            <label><input type ="checkbox" id = "cbxEdad" checked>Edad</label>
+            <label><input type ="checkbox" id = "cbxEquipo" checked>Equipo</label>
+            <label><input type ="checkbox" id = "cbxPosicion" checked>Posicion</label>
+            <label><input type ="checkbox" id = "cbxCantGoles" checked>Cantidad de Goles</label>
+            <label><input type ="checkbox" id = "cbxTitulo" checked>Titulo</label>
+            <label><input type ="checkbox" id = "cbxFacultad" checked>Facultad</label>
+            <label><input type ="checkbox" id = "cbxAnioGrad" checked>Año de Graduacion </label>
+        </div>
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Equipo</th>
+                <th>Posicion</th>
+                <th>Cantidad de Goles</th>
+                <th>Titulo</th>
+                <th>Facultad</th>
+                <th>Año de Graduacion</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+            </tbody>
+        <button type="button" id ="btnAgregar">Agregar</button>
+        </table>
+        </div>
+        
+    </form>
+
+
+    <script src="./practica1.js"></script>
+</body>
+</html>
