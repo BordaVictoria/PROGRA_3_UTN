@@ -1,0 +1,73 @@
+html,body{
+    width: auto;
+    height: auto;
+}
+.m-2{
+    display:grid;
+    width: auto;
+    height: auto;
+    grid-template-rows: 1fr3fr;
+    grid-template-columns: 1fr3fr;
+    grid-template-areas: 
+    "header header"
+    "nav principal";
+    background-color: rgb(102, 35, 76);
+}
+header{
+    grid-area:header;
+    background-color: blue;
+}
+
+#panel-izquierda{
+    grid-area: nav;
+}
+
+#principal{
+    grid-area:principal;
+    background-color: rgb(160, 167, 43);
+
+}
+
+#cartas{
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: 1fr;
+    gap: 15px; 
+    padding: 10px;
+    background-color: rgb(154, 110, 128);
+}
+
+#cartaInd {
+    background-color: rgb(245, 245, 220);
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+#cartaInd img{
+    width: 80%;     /* ocupa el 100% del ancho del div */
+    height: 80%;    /* ocupa el 100% del alto del div */
+    object-fit: cover;
+}
+
+
+
+#anterior,#siguiente{
+    height: auto;
+}
+
+@media only screen and (max-width: 900px) {
+#cartas{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+}
+}
+@media only screen and (max-width: 550px) {
+#cartas{
+    display: grid;
+    grid-template-columns: 1fr ;
+
+}
+}
