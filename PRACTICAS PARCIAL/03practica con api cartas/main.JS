@@ -22,6 +22,7 @@ function paginaAnterior(){
     
 }
 paginaAnterior();
+
 function paginaSiguiente(){
     $("cartas").innerHTML=" "
     for (let index = 7 ; index < 14; index++) {
@@ -38,6 +39,20 @@ function paginaSiguiente(){
 }
 }
 
+function guardados() {
+    $("cartas").innerHTML = "";
+    let cartasGuardadas = JSON.parse(localStorage.getItem("cartasGuardadas") || "[]");
+    console.log(cartasGuardadas);
+    for (let index = 0; index < cartasGuardadas.length; index++) {
+        let carta = Carta.createFromJsonString(JSON.stringify(cartasGuardadas[index]));
+        let htmlCarta = carta.createHtmlElement(carta);
+        $("cartas").appendChild(htmlCarta);
+    }
+}
 
 $("siguiente").addEventListener("click",paginaSiguiente);
 $("anterior").addEventListener("click",paginaAnterior)
+$("lnkGuardados").addEventListener("click", function(event){
+    event.preventDefault(); // Evita que el link recargue la página
+    guardados();            // Llama a tu función de mostrar cartas guardadas
+});

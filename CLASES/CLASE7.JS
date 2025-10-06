@@ -51,7 +51,6 @@ function ActualizarTabla(){
                         let personita = e.target.persona;
                         //servidor borra el nombre
                         personita.nombre="";
-                        ActualizarTabla2();
                     })
         celda.appendChild(boton);
         fila.appendChild(celda);

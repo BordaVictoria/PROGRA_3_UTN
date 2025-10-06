@@ -28,15 +28,15 @@ export default class Carta{
         let img = document.createElement("img");
         img.src=carta.urlImagen;
         let titulo = document.createElement("div");
-        titulo.textContent=carta.nombre; 
+        titulo.appendChild(document.createTextNode(carta.nombre));
         let precio = document.createElement("div");
-        precio.textContent = carta.precio;
+        precio.appendChild(document.createTextNode(carta.precio));
         let link = document.createElement("a");
         link.href=carta.urlScryFall;
         link.appendChild(img)
         let boton = document.createElement("button")
         boton.id="guardar"
-        boton.innerText= "Guardar";
+        boton.appendChild(document.createTextNode("Guardar"));
         boton.addEventListener("click",()=>{
             Carta.guardarCarta(carta)
         });
@@ -49,13 +49,14 @@ export default class Carta{
         return container;
     }
 
-    static guardarCarta(carta){
-        console.log("ea");
-        let cartaAguardar= JSON.stringify(carta);
-        let cartasGuardadas = JSON.parse(localStorage.getItem('cartasSeleccionadas') || '[]');
-        cartasGuardadas.push(cartaAguardar)
-        const myJSON = JSON.stringify(myObj);
-        localStorage.setItem("testJSON", myJSON);
-        console.log(cartasGuardadas)
+    static guardarCarta(carta) {
+    let cartasGuardadas = JSON.parse(localStorage.getItem("cartasGuardadas") || "[]");
+    if(cartasGuardadas.some(c => c.id === carta.id)){
+        console.log("no se puede guardar ya esta ahi ")
+    }else{
+        
+        cartasGuardadas.push(carta);
+    }
+    localStorage.setItem("cartasGuardadas", JSON.stringify(cartasGuardadas));
     }
 }

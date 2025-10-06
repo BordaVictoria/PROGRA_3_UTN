@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos.css"></link>
+    <title>Practica</title>
+</head>
+<body>
+<form  class="contenedor"  id="formulario">
+        <div>   
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Equipo</th>
+                <th>Posicion</th>
+                <th>Cantidad de Goles</th>
+                <th>Titulo</th>
+                <th>Facultad</th>
+                <th>Año de Graduacion</th>
+                <th>Modificar</th>
+                <th>Eliminar</th>         
+            </thead>
+            <tbody id="tblBody"> 
+
+            </tbody>
+        </table>
+        <button type="button" id ="btnAgregar">Agregar</button>
+        </div>
+    </form>
+    <div id="divABM" class = "hidden">
+        <form action="submit" id="formABM" >
+            <h2 id="titulo ABM ">Formulario ABM</h2>
+            <label>ID <input id="id" type="text" ></label>
+            <label>Nombre : <input id="txtnombre" type="text" required ></label>
+            <label>Apellido: <input id="txtApellido" type="text" required></label>
+            <label>Edad: <input id="txtEdad" type="number" min="15" ></label>
+            <label>Tipo: <select id="tipo" >
+                <option value="" selected disabled>-- Seleccionar tipo --</option>
+                <option value="jugadorSelec">Jugador</option>
+                <option value="profesionalSelec">Profesional</option>
+            </select></label>
+            <label class="hidden" id="lblEquipo" >Equipo: <input id="txtEquipo" type="text" min="15" ></label>
+            <label class="hidden" id="lblPosicion">Posicion: <input id="txtPosicion" type="text" min="15" ></label>
+            <label class="hidden" id="lblCantGoles">Cantidad De Goles: <input id="txtCantGoles" type="number" min="0" ></label>
+            
+            <label class="hidden" id="lblTitulo">Titulo: <input id="txtTitulo" type="text" min="15" ></label>
+            <label class="hidden"id= "lblUni">Universidad: <input id="txtUniversidad" type="text" min="15" ></label>
+            <label class="hidden" id="lblAniograd">Año de Graduacion <input id="txtAnioGrad" type="number" min="1950" ></label>
+            
+            <button type="button" id="btnAMBAceptar">Aceptar</button>
+            <button type="button" id="btnAMBCancelar">Cancelar</button>
+        </form>
+    </div>
+
+        <!-- 2c. Spinner/Overlay -->
+    <div id="spinner-overlay" class="spinner-overlay hidden">
+        <div class="spinner-ring"></div>
+    </div>
+
+    <script type= "module" src="./main.js"></script>
+</body>
+
+</html>
